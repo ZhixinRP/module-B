@@ -1,0 +1,12 @@
+<form action="">
+    <input type="hidden" id="post_title" name="post_title"><br><br>
+    <p class="tnplaceholder">Your note contents....</p>
+    <input type="submit" class="tdn" value="Access Today's Daily Note">
+</form>
+
+<script>
+    const date = new Date();
+    const month = date.toLocaleString('default', { month: 'long' });
+    let today = month + date.getDate() + date.getFullYear();
+    document.getElementById("post_title").value = today;
+</script>
